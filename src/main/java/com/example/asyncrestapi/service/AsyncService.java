@@ -35,7 +35,7 @@ public class AsyncService {
 	public CompletableFuture<EmployeeNames> getEmployeeName() throws InterruptedException {
 		log.info("getEmployeeName starts");
 		
-		EmployeeNames employeeNameData = restTemplate.getForObject("http://localhost:8081/names", EmployeeNames.class);
+		EmployeeNames employeeNameData = restTemplate.getForObject("http://localhost:8083/names", EmployeeNames.class);
 				
 		log.info("employeeNameData, {}", employeeNameData);
 		Thread.sleep(1000L); // Intentional delay
@@ -47,7 +47,7 @@ public class AsyncService {
 	public CompletableFuture<EmployeeAddresses> getEmployeeAddress() throws InterruptedException {
 		log.info("getEmployeeAddress starts");
 		
-		EmployeeAddresses employeeAddressData = restTemplate.getForObject("http://localhost:8081/addresses", EmployeeAddresses.class);
+		EmployeeAddresses employeeAddressData = restTemplate.getForObject("http://localhost:8083/addresses", EmployeeAddresses.class);
 		
 		log.info("employeeAddressData, {}", employeeAddressData);
 		Thread.sleep(1000L); // Intentional delay
@@ -59,7 +59,7 @@ public class AsyncService {
 	public CompletableFuture<EmployeePhone> getEmployeePhone() throws InterruptedException {
 		log.info("getEmployeePhone starts");
 		
-		EmployeePhone employeePhoneData = restTemplate.getForObject("http://localhost:8081/phones", EmployeePhone.class);
+		EmployeePhone employeePhoneData = restTemplate.getForObject("http://localhost:8083/phones", EmployeePhone.class);
 		
 		log.info("employeePhoneData, {}", employeePhoneData);
 		Thread.sleep(1000L); // Intentional delay
@@ -71,7 +71,7 @@ public class AsyncService {
 	public CompletableFuture<EmployeeCategory> getEmployeeCategory() throws InterruptedException {
 		log.info("getEmployeeCategory starts");
 		
-		EmployeeCategory employeeCategoryData = restTemplate.getForObject("http://localhost:8081/categories", EmployeeCategory.class);
+		EmployeeCategory employeeCategoryData = restTemplate.getForObject("http://localhost:8083/categories", EmployeeCategory.class);
 		
 		log.info("employeeCategoryData, {}", employeeCategoryData);
 		Thread.sleep(1000L); // Intentional delay
